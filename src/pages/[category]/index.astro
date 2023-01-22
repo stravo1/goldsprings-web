@@ -1,0 +1,47 @@
+---
+import categoryLists from "../../assets/categoryLists";
+import decorCategory from "../../assets/decorCategory";
+import Card from "../../components/Card.astro";
+import CategoryItem from "../../components/CategoryItem.astro";
+import Hero from "../../components/Hero.astro";
+import Layout from "../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return categoryLists.map((item) => ({
+    params: { category: item.link },
+    props: { title: item.category, desc: item.desc, built: item.built },
+  }));
+}
+
+const { title, desc, built, holder = "CategoryItem" } = Astro.props;
+---
+
+<Layout>
+  <Hero title={`${title} by Gold Springs`} subTitle={desc} />
+  <section class="m-4 lg:m-6">
+    <div class="font-medium text-amber-900 text-base my-6">
+      So what is your special event?
+    </div>
+    <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+      {
+        !built ? (
+          <div class="text-xl lg:text-2xl">Coming soon...</div>
+        ) : (
+          decorCategory.map((item) => {
+            switch (holder) {
+              case "CategoryItem":
+                return (
+                  <CategoryItem
+                    title={item.category}
+                    imgSrc={item.thumbImgSrc}
+                  />
+                );
+              case "Card":
+                return <Card />;
+            }
+          })
+        )
+      }
+    </div>
+  </section>
+</Layout>

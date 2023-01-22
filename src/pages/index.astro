@@ -1,15 +1,31 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import hero from "../images/hero.jpg";
+import CategoryItem from "../components/CategoryItem.astro";
+import categoryLists from "../assets/categoryLists";
+import Hero from "../components/Hero.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Gold Springs</title>
-	</head>
-	<body>
-		<h1>under construction</h1>
-	</body>
-</html>
+<Layout onHome={true}>
+  <Hero
+    title="Bringing Your Vision to Life:"
+    imgSrc={hero}
+    subTitle="Expertly planned, perfectly executed.  Professional Event Planning at its best by Gold Springs"
+  />
+  <section class="m-4 lg:m-6">
+    <div class="font-medium text-amber-900 text-base my-6">
+      We provide service in the following categories:
+    </div>
+    <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+      {
+        categoryLists.map((item) => (
+          <CategoryItem
+            title={item.category}
+            imgSrc={item.thumbImgSrc}
+            link={item.link}
+          />
+        ))
+      }
+    </div>
+  </section>
+</Layout>
