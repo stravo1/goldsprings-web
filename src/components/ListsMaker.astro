@@ -1,14 +1,20 @@
 ---
 import Card from "./Card.astro";
 import CategoryItem from "./CategoryItem.astro";
-const { list, holder } = Astro.props;
+const {
+  list,
+  holder,
+  title = "Services: ",
+  subTitle = "We specialize in the following services",
+} = Astro.props;
 ---
 
 <>
   <div class="font-medium text-amber-900 text-base my-6">
-    So what is your special event?
+    <h2 class="font-bold text-xl">{title}</h2>
+    {subTitle}
   </div>
-  <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+  <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
     {
       list.map((item) => {
         switch (holder) {

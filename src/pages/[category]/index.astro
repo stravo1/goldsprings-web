@@ -1,5 +1,6 @@
 ---
 import categoryLists from "../../assets/categoryLists";
+import ComingSoon from "../../components/ComingSoon.astro";
 import Hero from "../../components/Hero.astro";
 import ListsMaker from "../../components/ListsMaker.astro";
 import Layout from "../../layouts/Layout.astro";
@@ -9,26 +10,47 @@ export function getStaticPaths() {
     params: { category: item.link },
     props: {
       title: item.category,
+      listTitle: item.listTitle,
+      listSubtitle: item.listSubtitle,
       desc: item.desc,
       built: item.built,
       list: item.list,
       holder: item.holder,
+      heroImgSrc: item.heroImgSrc,
     },
   }));
 }
 
-const { title, desc, built, list, holder = "CategoryItem" } = Astro.props;
+const {
+  title,
+  desc,
+  built,
+  list,
+  heroImgSrc,
+  holder = "CategoryItem",
+  listTitle,
+  listSubtitle,
+} = Astro.props;
 ---
 
 <Layout>
-  <Hero title={`${title} by Gold Springs`} subTitle={desc} />
+  <Hero
+    title={`${title} by Gold Springs`}
+    subTitle={desc}
+    imgSrc={heroImgSrc}
+  />
   <section class="m-4 lg:m-6">
     <div>
       {
         !built ? (
-          <div class="text-xl lg:text-2xl">Coming soon...</div>
+          <ComingSoon />
         ) : (
-          <ListsMaker list={list} holder={holder} />
+          <ListsMaker
+            list={list}
+            holder={holder}
+            title={listTitle}
+            subTitle={listSubtitle}
+          />
         )
       }
     </div>

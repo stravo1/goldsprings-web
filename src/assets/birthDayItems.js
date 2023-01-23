@@ -1,4 +1,4 @@
-import bday18 from "../images/category-images/decor/birthday/bday18.jpeg";
+import bday18 from "../images/category-images/decor/birthday/items/bday18.jpeg";
 
 export default [
   {

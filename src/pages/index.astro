@@ -14,9 +14,10 @@ import Hero from "../components/Hero.astro";
   />
   <section class="m-4 lg:m-6">
     <div class="font-medium text-amber-900 text-base my-6">
-      We provide service in the following categories:
+      <h2 class="font-bold text-xl">Services:</h2>
+      We specialize in the following services
     </div>
-    <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
       {
         categoryLists.map((item) => (
           <CategoryItem
