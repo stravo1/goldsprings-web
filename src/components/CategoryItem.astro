@@ -1,5 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Img } from "astro-imagetools/components";
 const { title = "Sample", imgSrc, link } = Astro.props;
 ---
 
@@ -12,9 +12,16 @@ const { title = "Sample", imgSrc, link } = Astro.props;
     </div></a
   >
 
-  <Image
-    class="h-40 w-full object-cover rounded-lg"
+  <Img
+    layout={"fill"}
+    attributes={{
+      img: {
+        class: "h-40 w-full object-cover rounded-lg",
+      },
+    }}
     src={imgSrc}
+    loading={"lazy"}
+    decoding={"async"}
     alt={`${title} image`}
   />
 </section>

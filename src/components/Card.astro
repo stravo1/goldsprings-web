@@ -1,15 +1,22 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Img } from "astro-imagetools/components";
 import hero from "../images/hero.jpg";
 const { title, imgSrc = hero, link = "/" } = Astro.props;
 ---
 
 <div class="relative w-full h-52 rounded-md">
   <a href={`/${link}`}>
-    <Image
-      class="w-full h-full object-cover rounded-md"
+    <Img
+      layout={"fill"}
+      attributes={{
+        img: {
+          class: "w-full h-full object-cover rounded-md",
+        },
+      }}
       src={imgSrc}
-      alt="Card Image"
+      loading={"lazy"}
+      decoding={"async"}
+      alt={`${title} image`}
     /></a
   >
   <div

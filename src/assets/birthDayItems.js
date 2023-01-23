@@ -1,4 +1,4 @@
-import bday18 from "../images/category-images/decor/birthday/items/bday18.jpeg";
+const bday18 = "/src/images/category-images/decor/birthday/items/bday18.jpeg";
 
 export default [
   {

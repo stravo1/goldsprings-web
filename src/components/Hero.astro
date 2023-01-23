@@ -1,8 +1,7 @@
 ---
 import TopPanel from "./TopPanel.astro";
-import { Image } from "@astrojs/image/components";
-import hero from "../images/hero.jpg";
-const { imgSrc = hero, title, subTitle, isItem = false } = Astro.props;
+import { Img } from "astro-imagetools/components";
+const { imgSrc , title, subTitle, isItem = false } = Astro.props;
 ---
 
 <section class="hero h-[55vh] lg:h-[60vh] relative">
@@ -29,9 +28,16 @@ const { imgSrc = hero, title, subTitle, isItem = false } = Astro.props;
       </div>
     </div>
   </div>
-  <Image
-    class="h-[55vh] lg:h-[60vh] object-cover w-full"
+  <Img
+    layout={"fill"}
+    attributes={{
+      img: {
+        class: "h-[55vh] lg:h-[60vh] object-cover w-full",
+      },
+    }}
     src={imgSrc}
-    alt="hero-image"
+    loading={"lazy"}
+    decoding={"async"}
+    alt="A landscape image"
   />
 </section>

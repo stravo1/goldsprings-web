@@ -1,20 +1,20 @@
-import birthday from "../images/category-images/decor/birthday/birthday.jpg";
-import birthdayHero from "../images/category-images/decor/birthday/birthday-hero.jpg";
+const birthday = "/src/images/category-images/decor/birthday/birthday.jpg";
+const birthdayHero = "/src/images/category-images/decor/birthday/birthday-hero.jpg";
 
-import wedding from "../images/category-images/decor/wedding/wedding.jpg";
-import weddingHero from "../images/category-images/decor/wedding/wedding-hero.jpg";
+const wedding = "/src/images/category-images/decor/wedding/wedding.jpg";
+const weddingHero = "/src/images/category-images/decor/wedding/wedding-hero.jpg";
 
-import anniversary from "../images/category-images/decor/anniversary/anniversary.jpg";
-import anniversaryHero from "../images/category-images/decor/anniversary/anniversary-hero.jpg";
+const anniversary = "/src/images/category-images/decor/anniversary/anniversary.jpg";
+const anniversaryHero = "/src/images/category-images/decor/anniversary/anniversary-hero.jpg";
 
-import puja from "../images/category-images/decor/puja/puja.jpg";
-import pujaHero from "../images/category-images/decor/puja/puja-hero.jpg";
+const puja = "/src/images/category-images/decor/puja/puja.jpg";
+const pujaHero = "/src/images/category-images/decor/puja/puja-hero.jpg";
 
-import proposal from "../images/category-images/decor/proposal/proposal.jpg";
-import proposalHero from "../images/category-images/decor/proposal/proposal-hero.jpg";
+const proposal = "/src/images/category-images/decor/proposal/proposal.jpg";
+const proposalHero = "/src/images/category-images/decor/proposal/proposal-hero.jpg";
 
-import surprise from "../images/category-images/decor/surprise/surprise.jpg";
-import surpriseHero from "../images/category-images/decor/surprise/surprise-hero.jpg";
+const surprise = "/src/images/category-images/decor/surprise/surprise.jpg";
+const surpriseHero = "/src/images/category-images/decor/surprise/surprise-hero.jpg";
 
 import birthDayItems from "./birthDayItems";
 

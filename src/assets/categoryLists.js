@@ -1,16 +1,16 @@
-import cater from "../images/category-images/cater.jpg";
-import decor from "../images/category-images/decor.jpg";
-import photo from "../images/category-images/photo.jpg";
-import ritual from "../images/category-images/rituals.jpg";
-import bus from "../images/category-images/bus.jpg";
-import card from "../images/category-images/card.jpg";
+const cater = "/src/images/category-images/cater.jpg";
+const decor = "/src/images/category-images/decor.jpg";
+const photo = "/src/images/category-images/photo.jpg";
+const ritual = "/src/images/category-images/rituals.jpg";
+const bus = "/src/images/category-images/bus.jpg";
+const card = "/src/images/category-images/card.jpg";
 
-import decorHero from "../images/category-images/decor/decor-hero.jpg";
-import caterHero from "../images/category-images/cater/cater-hero.jpg";
-import photoHero from "../images/category-images/photo/photo-hero.jpg";
-import ritualHero from "../images/category-images/rituals/rituals-hero.jpg";
-import busHero from "../images/category-images/bus/bus-hero.jpg";
-import cardHero from "../images/category-images/card/card-hero.jpg";
+const decorHero = "/src/images/category-images/decor/decor-hero.jpg";
+const caterHero = "/src/images/category-images/cater/cater-hero.jpg";
+const photoHero = "/src/images/category-images/photo/photo-hero.jpg";
+const ritualHero = "/src/images/category-images/rituals/rituals-hero.jpg";
+const busHero = "/src/images/category-images/bus/bus-hero.jpg";
+const cardHero = "/src/images/category-images/card/card-hero.jpg";
 
 import decorCategory from "./decorCategory";
 
