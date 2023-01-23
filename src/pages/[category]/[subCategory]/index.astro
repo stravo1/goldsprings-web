@@ -1,12 +1,15 @@
 ---
-import categoryLists from "../../assets/categoryLists";
-import Hero from "../../components/Hero.astro";
-import ListsMaker from "../../components/ListsMaker.astro";
-import Layout from "../../layouts/Layout.astro";
+import decorCategory from "../../../assets/decorCategory";
+import Hero from "../../../components/Hero.astro";
+import ListsMaker from "../../../components/ListsMaker.astro";
+import Layout from "../../../layouts/Layout.astro";
 
 export function getStaticPaths() {
-  return categoryLists.map((item) => ({
-    params: { category: item.link },
+  return decorCategory.map((item) => ({
+    params: {
+      category: item.link.split("/")[0],
+      subCategory: item.link.split("/")[1],
+    },
     props: {
       title: item.category,
       desc: item.desc,
@@ -17,7 +20,7 @@ export function getStaticPaths() {
   }));
 }
 
-const { title, desc, built, list, holder = "CategoryItem" } = Astro.props;
+const { title, desc, built, list, holder } = Astro.props;
 ---
 
 <Layout>

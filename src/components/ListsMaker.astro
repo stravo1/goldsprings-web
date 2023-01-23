@@ -1,0 +1,35 @@
+---
+import Card from "./Card.astro";
+import CategoryItem from "./CategoryItem.astro";
+const { list, holder } = Astro.props;
+---
+
+<>
+  <div class="font-medium text-amber-900 text-base my-6">
+    So what is your special event?
+  </div>
+  <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+    {
+      list.map((item) => {
+        switch (holder) {
+          case "CategoryItem":
+            return (
+              <CategoryItem
+                title={item.category}
+                imgSrc={item.thumbImgSrc}
+                link={item.link}
+              />
+            );
+          case "Card":
+            return (
+              <Card
+                title={item.title}
+                imgSrc={item.thumbImgSrc}
+                link={item.link}
+              />
+            );
+        }
+      })
+    }
+  </div>
+</>

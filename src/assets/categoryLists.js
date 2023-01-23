@@ -3,13 +3,16 @@ import decor from "../images/category-images/flags.png";
 import photo from "../images/category-images/camera.png";
 import ritual from "../images/category-images/candle.png";
 import bus from "../images/category-images/bus.png";
-import card from "../images/category-images/card.png";
+import card from "../images/category-images/card-3.png";
+import decorCategory from "./decorCategory";
 
 export default [
   {
     category: "Decor",
     link: "decor",
     built: true,
+    holder: "CategoryItem",
+    list: decorCategory,
     thumbImgSrc: decor,
     desc: "Elevate your event with our expert decor planning. Custom designs, flawless execution. Memorable events guaranteed.",
   },

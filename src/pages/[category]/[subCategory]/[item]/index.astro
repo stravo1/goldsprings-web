@@ -1,0 +1,28 @@
+---
+import birthDayItems from "../../../../assets/birthDayItems";
+import Hero from "../../../../components/Hero.astro";
+import Info from "../../../../components/Info.astro";
+import Layout from "../../../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return birthDayItems.map((item) => ({
+    params: {
+      category: item.link.split("/")[0],
+      subCategory: item.link.split("/")[1],
+      item: item.link.split("/")[2],
+    },
+    props: {
+      title: item.title,
+      desc: item.desc,
+      imgSrc: item.thumbImgSrc,
+    },
+  }));
+}
+
+const { title, desc, imgSrc } = Astro.props;
+---
+
+<Layout>
+  <Hero title={title} subTitle={desc} isItem={true} imgSrc={imgSrc} />
+  <Info />
+</Layout>

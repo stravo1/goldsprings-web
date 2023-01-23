@@ -1,14 +1,14 @@
 ---
 import { Image } from "@astrojs/image/components";
 import bday from "../images/category-images/catering.png";
-const { title = "Sample", imgSrc = bday, link = "/decor" } = Astro.props;
+const { title = "Sample", imgSrc = bday, link } = Astro.props;
 ---
 
-<section class="flex w-full bg-[#E5BA73] my-4 rounded-md">
+<section class="flex w-full bg-orange-200 my-4 rounded-md">
   <div
-    class="basis-4/5 flex justify-start items-center p-6 font-semibold text-lg text-amber-800"
+    class="basis-4/5 flex justify-start items-center p-6 font-semibold text-lg text-amber-900"
   >
-    <a href={link}>{title}</a>
+    <a href={`/${link}`}>{title}</a>
   </div>
   <div class="basis-1/5 relative p-4">
     <Image class="h-10 w-10 object-cover" src={imgSrc} alt={`${title} image`} />
