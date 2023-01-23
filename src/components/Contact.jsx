@@ -13,13 +13,11 @@ export default function Modal() {
         Contact
       </button>
       <div
-        onClick={() => {
-          setVisible(false);
-        }}
+        
         class="fixed top-0 left-0 h-screen w-screen z-50 flex items-center justify-center bg-black bg-opacity-75"
         style={visible ? { display: "flex" } : { display: "none" }}
       >
-        <div class="bg-orange-100 rounded-lg p-8 md:p-10 text-amber-900">
+        <div class="bg-orange-100 rounded-lg p-4 md:p-10 text-amber-900 w-[75vw]">
           <form>
             <h2 class="font-bold text-xl mb-4">Contact Us</h2>
             <div class="mb-4">
