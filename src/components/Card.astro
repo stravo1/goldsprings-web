@@ -6,6 +6,7 @@ const { title, imgSrc = hero, link = "/" } = Astro.props;
 
 <div class="relative w-full h-52 rounded-md">
   <a href={`/${link}`}>
+    <div class="transparent absolute w-full h-full"></div>
     <Img
       layout={"fill"}
       attributes={{
@@ -17,11 +18,11 @@ const { title, imgSrc = hero, link = "/" } = Astro.props;
       loading={"lazy"}
       decoding={"async"}
       alt={`${title} image`}
-    /></a
+    />
+    <div
+      class="absolute bottom-0 right-0 p-4 text-white text-center bg-black bg-opacity-50 rounded-md"
+    >
+      <p class="text-lg font-medium">{title}</p>
+    </div></a
   >
-  <div
-    class="absolute bottom-0 right-0 p-4 text-white text-center bg-black bg-opacity-50 rounded-md"
-  >
-    <p class="text-lg font-medium">{title}</p>
-  </div>
 </div>
