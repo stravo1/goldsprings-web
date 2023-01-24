@@ -1,11 +1,13 @@
 ---
+import anniversaryItems from "../../../../assets/anniversaryItems";
 import birthDayItems from "../../../../assets/birthDayItems";
 import Hero from "../../../../components/Hero.astro";
 import Info from "../../../../components/Info.astro";
 import Layout from "../../../../layouts/Layout.astro";
 
 export function getStaticPaths() {
-  return birthDayItems.map((item) => ({
+  const totalList = [...birthDayItems, ...anniversaryItems];
+  return totalList.map((item) => ({
     params: {
       category: item.link.split("/")[0],
       subCategory: item.link.split("/")[1],

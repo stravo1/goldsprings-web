@@ -1,21 +1,28 @@
 const birthday = "/src/images/category-images/decor/birthday/birthday.jpg";
-const birthdayHero = "/src/images/category-images/decor/birthday/birthday-hero.jpg";
+const birthdayHero =
+  "/src/images/category-images/decor/birthday/birthday-hero.jpg";
 
 const wedding = "/src/images/category-images/decor/wedding/wedding.jpg";
-const weddingHero = "/src/images/category-images/decor/wedding/wedding-hero.jpg";
+const weddingHero =
+  "/src/images/category-images/decor/wedding/wedding-hero.jpg";
 
-const anniversary = "/src/images/category-images/decor/anniversary/anniversary.jpg";
-const anniversaryHero = "/src/images/category-images/decor/anniversary/anniversary-hero.jpg";
+const anniversary =
+  "/src/images/category-images/decor/anniversary/anniversary.jpg";
+const anniversaryHero =
+  "/src/images/category-images/decor/anniversary/anniversary-hero.jpg";
 
 const puja = "/src/images/category-images/decor/puja/puja.jpg";
 const pujaHero = "/src/images/category-images/decor/puja/puja-hero.jpg";
 
 const proposal = "/src/images/category-images/decor/proposal/proposal.jpg";
-const proposalHero = "/src/images/category-images/decor/proposal/proposal-hero.jpg";
+const proposalHero =
+  "/src/images/category-images/decor/proposal/proposal-hero.jpg";
 
 const surprise = "/src/images/category-images/decor/surprise/surprise.jpg";
-const surpriseHero = "/src/images/category-images/decor/surprise/surprise-hero.jpg";
+const surpriseHero =
+  "/src/images/category-images/decor/surprise/surprise-hero.jpg";
 
+import anniversaryItems from "./anniversaryItems";
 import birthDayItems from "./birthDayItems";
 
 export default [
@@ -42,9 +49,13 @@ export default [
   {
     category: "Anniversary",
     link: "decor/anniversary",
-    built: false,
+    built: true,
+    holder: "Card",
+    list: anniversaryItems,
     thumbImgSrc: anniversary,
     heroImgSrc: anniversaryHero,
+    listTitle: "Packages",
+    listSubtitle: "We offer the following packages: ",
     desc: "Creating a romantic ambiance for your anniversary. Professional decor planning and design services.",
   },
   {
