@@ -24,6 +24,8 @@ const surpriseHero =
 
 import anniversaryItems from "./anniversaryItems";
 import birthDayItems from "./birthDayItems";
+import pujaItems from "./pujaItems";
+import weddingItems from "./weddingItems";
 
 export default [
   {
@@ -41,9 +43,13 @@ export default [
   {
     category: "Wedding",
     link: "decor/wedding",
-    built: false,
+    built: true,
+    holder: "Card",
+    list: weddingItems,
     thumbImgSrc: wedding,
     heroImgSrc: weddingHero,
+    listTitle: "Packages",
+    listSubtitle: "We offer the following packages: ",
     desc: "Making your dream wedding a reality. Professional decor planning and design services.",
   },
   {
@@ -61,9 +67,13 @@ export default [
   {
     category: "Puja",
     link: "decor/puja",
-    built: false,
+    built: true,
+    holder: "Card",
+    list: pujaItems,
     thumbImgSrc: puja,
     heroImgSrc: pujaHero,
+    listTitle: "Packages",
+    listSubtitle: "We offer the following packages: ",
     desc: "Enhancing the spiritual ambiance of your puja. Professional decor planning and design services.",
   },
   {
