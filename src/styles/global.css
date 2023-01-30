@@ -54,3 +54,12 @@ body {
 img {
   pointer-events: none;
 }
+.items h1 {
+  @apply font-bold text-xl
+}
+.items h3 {
+  @apply font-bold text-lg
+}
+.items ul {
+  @apply list-disc px-8 pb-4
+}

@@ -1,14 +1,19 @@
 ---
-import anniversaryItems from "../../../../assets/anniversaryItems";
-import birthDayItems from "../../../../assets/birthDayItems";
-import pujaItems from "../../../../assets/pujaItems";
-import weddingItems from "../../../../assets/weddingItems";
+import anniversaryItems from "../../../../assets/lists/anniversaryItems";
+import birthDayItems from "../../../../assets/lists/birthDayItems";
+import pujaItems from "../../../../assets/lists/pujaItems";
+import weddingItems from "../../../../assets/lists/weddingItems";
 import Hero from "../../../../components/Hero.astro";
 import Info from "../../../../components/Info.astro";
 import Layout from "../../../../layouts/Layout.astro";
 
 export function getStaticPaths() {
-  const totalList = [...birthDayItems, ...anniversaryItems, ...pujaItems, ...weddingItems];
+  const totalList = [
+    ...birthDayItems,
+    ...anniversaryItems,
+    ...pujaItems,
+    ...weddingItems,
+  ];
   return totalList.map((item) => ({
     params: {
       category: item.link.split("/")[0],

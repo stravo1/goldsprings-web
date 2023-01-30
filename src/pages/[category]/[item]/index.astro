@@ -1,0 +1,58 @@
+---
+import cateringMenuItems from "../../../assets/lists/cateringMenuItems";
+import Hero from "../../../components/Hero.astro";
+import Info from "../../../components/Info.astro";
+import Layout from "../../../layouts/Layout.astro";
+
+import { Content as Standard } from "../../../assets/catering-menus/standard.md";
+import { Content as Standard2 } from "../../../assets/catering-menus/standard-2.md";
+import { Content as FullCourse } from "../../../assets/catering-menus/full-course.md";
+import { Content as FullCourse2 } from "../../../assets/catering-menus/full-course-2.md";
+import { Content as Aroma } from "../../../assets/catering-menus/aroma.md";
+import { Content as Exquisite } from "../../../assets/catering-menus/exquisite.md";
+
+export function getStaticPaths() {
+  const totalList = [...cateringMenuItems];
+  return totalList.map((item, index) => ({
+    params: {
+      category: item.link.split("/")[0],
+      item: item.link.split("/")[1],
+    },
+    props: {
+      title: item.title,
+      desc: item.desc,
+      imgSrc: item.thumbImgSrc,
+      border: item.border,
+      index: index,
+    },
+  }));
+}
+
+const { title, desc, imgSrc, border, index } = Astro.props;
+---
+
+<Layout>
+  <Hero title={title} subTitle={desc} isItem={true} imgSrc={imgSrc} />
+  <Info>
+    <div class="text-xl font-bold">The menu</div>
+    <div class="text-base font-medium mb-6">
+      We offer the following catalogue of items:
+    </div>
+    <div
+      class={border
+        ? "items border-2 border-amber-800 w-fit rounded-md border-dashed p-4"
+        : "items"}
+    >
+      {
+        [
+          <Standard />,
+          <Standard2 />,
+          <FullCourse />,
+          <FullCourse2 />,
+          <Aroma />,
+          <Exquisite />,
+        ][index]
+      }
+    </div>
+  </Info>
+</Layout>
