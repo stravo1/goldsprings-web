@@ -1,7 +1,7 @@
 ### Starters
-- Chicken Finger/ Paneer Finger (for vegetarian people only)
-- Chicken Manchurian (for vegetarian people only)
-- Fish Ball / Veg balls (for veg people only)
+- Chicken Finger/ Paneer Finger
+- Chicken Manchurian
+- Fish Ball / Veg balls
 - Crispy chili potato / French Fry / Potato Wedges / Veg Pakora
 - Coffee
 
