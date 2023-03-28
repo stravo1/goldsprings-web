@@ -23,14 +23,14 @@ export default [
     border: true,
   },
   {
-    title: "Full Course",
+    title: "Premium",
     link: "catering/full",
     thumbImgSrc: full,
     desc: desc,
     border: true,
   },
   {
-    title: "Full Course v2",
+    title: "Premium v2",
     link: "catering/full-2",
     thumbImgSrc: full2,
     desc: desc,
