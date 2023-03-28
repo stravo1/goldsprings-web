@@ -1,9 +1,11 @@
 ---
-import TopPanel from "../components/TopPanel.astro";
+import { Img } from "astro-imagetools/components";
+// import TopPanel from "../components/TopPanel.astro";
 import "../styles/global.css";
+
 const meta = {
   title: "Gold Springs - Event Planners",
-  description: "Unique and Memorable Event Planning!",
+  description: "Your trusted event planner in Kolkata: unique and memorable event planning!",
   type: "website",
   image: "/images/og_img.png",
   date: "",
@@ -31,6 +33,7 @@ const meta = {
 
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={meta.description} />
     <meta charset="utf-8" />
     <link
       rel="apple-touch-icon"
@@ -70,4 +73,58 @@ const meta = {
       <slot />
     </main>
   </body>
+  <footer class="bg-stone-700 w-full p-6 pt-12 text-red-50">
+    <div class="font-medium flex flex-col lg:flex-row lg:gap-10">
+      <div>
+        <div class="opacity-50 w-[150px] border-b-2">
+          GOLD SPRINGS
+        </div>
+        
+        <p class="text-sm mt-2 opacity-50">
+          <a href="/about">About Us</a>
+        </p>
+        <p class="text-sm opacity-50">
+          <a href="/contact">Contact Us</a>
+        </p>
+        <p class="text-sm opacity-50">
+          Leave a review
+        </p>
+      </div>
+  
+      <div>
+        <div class="opacity-50 w-[150px] border-b-2 mt-8 lg:mt-0">
+          FOLLOW US
+        </div>
+        <div class="flex gap-3 mt-3 opacity-50">
+          <div class="h-6 w-6">
+            <a target="_blank" href="https://www.facebook.com/people/Gold-Springs-Event-Management/100089624130243/">
+              <Img
+                layout={"fill"}
+                
+                src="/src/images/fb-1.png"
+                loading={"lazy"}
+                decoding={"async"}
+                alt="facebook"
+              />
+            </a>
+          </div>
+          <div class="h-6 w-6">
+            <a href="https://www.instagram.com/Gold_Springs_/" target="_blank">
+              <Img
+                layout={"fill"}
+                
+                src="/src/images/insta-3.png"
+                loading={"lazy"}
+                decoding={"async"}
+                alt="instagram"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mt-10 text-center opacity-50">
+      © Copyright 2023, Gold Springs 
+    </p>
+  </footer>
 </html>
