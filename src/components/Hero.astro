@@ -1,42 +1,55 @@
 ---
+import FirstSlide from "./FirstSlide.astro";
+import SwiperWrapper from "./SwiperWrapper";
 import TopPanel from "./TopPanel.astro";
 import { Img } from "astro-imagetools/components";
-const { imgSrc, title, subTitle, isItem = false } = Astro.props;
+
+const { title, subTitle, imgSrc, isItem = false, imageList = [] } = Astro.props;
 ---
 
-<section class="hero relative h-[55vh] lg:h-[60vh]">
-  <div class="grad absolute flex h-full w-full flex-col">
-    <div
-      class={isItem
-        ? "flex h-full p-4 pb-6 md:p-8 md:pb-10 justify-start items-end text-amber-100 font-bold md:font-black text-2xl md:text-4xl lg:text-5xl"
-        : "flex h-full p-4 md:p-8 justify-start items-center text-amber-100 font-bold md:font-black text-2xl md:text-4xl lg:text-5xl"}
-    >
-      <div class="basis-5/6 md:basis-2/3">
-        <div>
-          {title}
-          <!-- <br />
-            <div class="hidden md:block">
-              Unique and Memorable Event Planning
-            </div> -->
+<div class="relative h-[55vh] lg:h-[60vh]">
+  <TopPanel />
+  <div class="absolute top-0 h-full w-full">
+    <SwiperWrapper client:load>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <FirstSlide
+              title={title}
+              subTitle={subTitle}
+              isItem={isItem}
+              imgSrc={imgSrc}
+            />
+          </div>
+          {
+            imageList.map((item, index) => (
+              <div class="swiper-slide">
+                <section class="hero relative h-[55vh] lg:h-[60vh]">
+                  <Img
+                    layout={"fill"}
+                    attributes={{
+                      img: {
+                        class: "h-[55vh] lg:h-[60vh] object-cover w-full",
+                      },
+                    }}
+                    src={item}
+                    loading={"lazy"}
+                    decoding={"async"}
+                    alt="A landscape image"
+                  />
+                </section>
+              </div>
+            ))
+          }
         </div>
-        <div
-          class={"font-medium md:font-semibold text-base md:text-xl lg:text-2xl mt-2 md:mt-6"}
-        >
-          {subTitle}
+
+        <div class={imageList.length ? "swiper-button-prev" : "hidden"}>
+          <span class="material-symbols-outlined">chevron_left</span>
+        </div>
+        <div class={imageList.length ? "swiper-button-next" : "hidden"}>
+          <span class="material-symbols-outlined">chevron_right</span>
         </div>
       </div>
-    </div>
+    </SwiperWrapper>
   </div>
-  <Img
-    layout={"fill"}
-    attributes={{
-      img: {
-        class: "h-[55vh] lg:h-[60vh] object-cover w-full",
-      },
-    }}
-    src={imgSrc}
-    loading={"lazy"}
-    decoding={"async"}
-    alt="A landscape image"
-  />
-</section>
+</div>

@@ -12,12 +12,6 @@ import { Content as FullCourse2 } from "../../../assets/catering-menus/full-cour
 import { Content as Aroma } from "../../../assets/catering-menus/aroma.md";
 import { Content as Exquisite } from "../../../assets/catering-menus/exquisite.md";
 import { Content as Bridal } from "../../../assets/photography/bridal.md";
-import SwiperWrapper from "../../../components/SwiperWrapper";
-
-import { Img } from "astro-imagetools/components";
-import { log } from "astro/dist/core/logger/core";
-import TopPanel from "../../../components/TopPanel.astro";
-import Hero2 from "./Hero2.astro";
 
 export function getStaticPaths() {
   const totalList = [...cateringMenuItems, ...photographyItems];
@@ -52,7 +46,7 @@ const {
 ---
 
 <Layout>
-  <Hero2
+  <Hero
     title={title}
     subTitle={desc}
     isItem={true}
