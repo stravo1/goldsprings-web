@@ -1,0 +1,3 @@
+- Capture your special day in timeless beauty with our bridal photography package. 
+- Our team of experienced photographers specializes in capturing every moment, _from the intimate getting-ready shots to the joyous reception celebrations_.
+- With a keen eye for detail and a passion for creativity, we create stunning, personalized images that tell the story of your unique love. 

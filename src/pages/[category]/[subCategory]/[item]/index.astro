@@ -3,6 +3,7 @@ import anniversaryItems from "../../../../assets/lists/anniversaryItems";
 import birthDayItems from "../../../../assets/lists/birthDayItems";
 import pujaItems from "../../../../assets/lists/pujaItems";
 import weddingItems from "../../../../assets/lists/weddingItems";
+import proposalItems from "../../../../assets/lists/proposalItems";
 import Hero from "../../../../components/Hero.astro";
 import Info from "../../../../components/Info.astro";
 import Layout from "../../../../layouts/Layout.astro";
@@ -13,6 +14,7 @@ export function getStaticPaths() {
     ...anniversaryItems,
     ...pujaItems,
     ...weddingItems,
+    ...proposalItems
   ];
   return totalList.map((item) => ({
     params: {

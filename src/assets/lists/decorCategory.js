@@ -26,6 +26,8 @@ import anniversaryItems from "./anniversaryItems";
 import birthDayItems from "./birthDayItems";
 import pujaItems from "./pujaItems";
 import weddingItems from "./weddingItems";
+import proposalItems from "./proposalItems";
+import surpriseItems from "./surpriseItems";
 
 export default [
   {
@@ -79,17 +81,25 @@ export default [
   {
     category: "Proposal",
     link: "decor/proposal",
-    built: false,
+    built: true,
+    holder: "Card",
+    list: proposalItems,
     thumbImgSrc: proposal,
     heroImgSrc: proposalHero,
+    listTitle: "Packages",
+    listSubtitle: "We offer the following packages: ",
     desc: "Creating a magical ambiance for your proposal. Professional event decor planning and design services.",
   },
   {
     category: "Surprise",
     link: "decor/surprise",
-    built: false,
+    built: true,
+    holder: "Card",
+    list: surpriseItems,
     thumbImgSrc: surprise,
     heroImgSrc: surpriseHero,
+    listTitle: "Packages",
+    listSubtitle: "We offer the following packages: ",
     desc: "Making every surprise a memorable one. Professional event decor planning and design services.",
   },
 ];

@@ -1,0 +1,50 @@
+---
+import Hero from "../../../components/Hero.astro";
+import SwiperWrapper from "../../../components/SwiperWrapper";
+import TopPanel from "../../../components/TopPanel.astro";
+import { Img } from "astro-imagetools/components";
+
+const { title, subTitle, imgSrc, isItem, imageList = [] } = Astro.props;
+---
+
+<div class="relative h-[55vh] lg:h-[60vh]">
+  <TopPanel />
+  <div class="absolute top-0 h-full w-full">
+    <SwiperWrapper client:load>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <Hero title={title} subTitle={subTitle} isItem={isItem} imgSrc={imgSrc} />
+          </div>
+          {
+            imageList.map((item, index) => (
+              <div class="swiper-slide">
+                <section class="hero relative h-[55vh] lg:h-[60vh]">
+                  <Img
+                    layout={"fill"}
+                    attributes={{
+                      img: {
+                        class: "h-[55vh] lg:h-[60vh] object-cover w-full",
+                      },
+                    }}
+                    src={item}
+                    loading={"lazy"}
+                    decoding={"async"}
+                    alt="A landscape image"
+                  />
+                </section>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="swiper-button-prev">
+          <span class="material-symbols-outlined">chevron_left</span>
+        </div>
+        <div class="swiper-button-next">
+          <span class="material-symbols-outlined">chevron_right</span>
+        </div>
+      </div>
+    </SwiperWrapper>
+  </div>
+</div>

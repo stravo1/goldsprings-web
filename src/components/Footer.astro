@@ -1,0 +1,58 @@
+---
+import { Img } from "astro-imagetools/components";
+---
+
+<footer class="w-full bg-stone-700 p-6 pt-12 text-red-50 mt-12">
+  <div class="flex flex-col font-medium lg:flex-row lg:gap-10">
+    <div>
+      <div class="w-[150px] border-b-2 opacity-50">GOLD SPRINGS</div>
+
+      <p class="mt-2 text-sm opacity-50">
+        <a href="/about">About Us</a>
+      </p>
+      <p class="text-sm opacity-50">
+        <a href="/contact">Contact Us</a>
+      </p>
+      <p class="text-sm opacity-50">
+        <a
+          target="_blank"
+          href="https://www.google.com/search?client=ms-android-oneplus-rvo3&cs=1&hl=en-US&output=search&q=Gold+Springs+Event+Planners&ludocid=11842029471726518696&gsas=1&client=ms-android-oneplus-rvo3&ibp=gwp;0,7&lsig=AB86z5XYGIqjyWPiK5XTYK8haHWJ&kgs=bd5245609daf2ba5&shndl=-1&source=sh/x/kp/local/4#lkt=LocalPoiReviews"
+        >
+          Leave a review
+        </a>
+      </p>
+    </div>
+
+    <div>
+      <div class="mt-8 w-[150px] border-b-2 opacity-50 lg:mt-0">FOLLOW US</div>
+      <div class="mt-3 flex gap-3 opacity-50">
+        <div class="h-6 w-6">
+          <a
+            target="_blank"
+            href="https://www.facebook.com/people/Gold-Springs-Event-Management/100089624130243/"
+          >
+            <Img
+              layout={"fill"}
+              src="/src/images/fb-1.png"
+              loading={"lazy"}
+              decoding={"async"}
+              alt="facebook"
+            />
+          </a>
+        </div>
+        <div class="h-6 w-6">
+          <a href="https://www.instagram.com/Gold_Springs_/" target="_blank">
+            <Img
+              layout={"fill"}
+              src="/src/images/insta-3.png"
+              loading={"lazy"}
+              decoding={"async"}
+              alt="instagram"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="mt-10 text-center opacity-50">© Copyright 2023, Gold Springs</p>
+</footer>

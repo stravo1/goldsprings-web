@@ -18,10 +18,12 @@
     "astro-imagetools": "^0.7.6",
     "preact": "^10.11.3",
     "sharp": "^0.31.3",
+    "swiper": "^9.1.1",
     "tailwindcss": "^3.2.4"
   },
   "devDependencies": {
-    "prettier": "^2.8.3",
+    "prettier": "^2.8.7",
+    "prettier-plugin-astro": "^0.8.0",
     "prettier-plugin-tailwindcss": "^0.2.2"
   }
 }

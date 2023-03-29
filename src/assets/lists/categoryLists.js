@@ -14,6 +14,7 @@ const cardHero = "/src/images/category-images/card/card-hero.jpg";
 
 import cateringMenuItems from "./cateringMenuItems";
 import decorCategory from "./decorCategory";
+import photographyItems from "./photographyItems";
 
 export default [
   {
@@ -43,9 +44,13 @@ export default [
   {
     category: "Photography",
     link: "photography",
-    built: false,
+    built: true,
+    holder: "Card",
+    list: photographyItems,
     thumbImgSrc: photo,
     heroImgSrc: photoHero,
+    listTitle: "Click!",
+    listSubtitle: "We provide photography service for the following events: ",
     desc: "Preserve memories that last a lifetime with our professional event photography services.",
   },
   {

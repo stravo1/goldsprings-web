@@ -63,3 +63,21 @@ img {
 .items ul {
   @apply list-disc px-8 pb-4
 }
+
+/* wiperjs styles */
+:root {
+  --swiper-theme-color: white !important;
+}
+
+.swiper-button-next::after {
+  content: '' !important;
+}
+.swiper-button-prev::after {
+  content: '' !important;
+}
+.swiper-button-disabled {
+  display: none !important;
+}
+.material-symbols-outlined {
+  font-size: 36px !important;
+}

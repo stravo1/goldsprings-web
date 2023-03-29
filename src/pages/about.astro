@@ -4,36 +4,37 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout onHome={true}>
-    <Hero
-      title="About us"
-      imgSrc="/src/images/contact.jpg"
-      subTitle="Bringing your dream events to life, one celebration at a time - we are your trusted event planner in Kolkata."
-    />
-    <section class="m-4 lg:m-6 flex justify-center items-center">
-      <div class="max-w-[400px]">
-        <div class="font-medium text-amber-900 text-base my-6">
-          <h2 class="font-bold text-xl mb-4">See you soon!</h2>
-          
-          Our team of dedicated professionals strives to understand your unique
-          vision and bring it to life through meticulous planning and execution.
-          From intimate gatherings to grand celebrations, we offer a wide range of
-          services tailored to meet your specific needs. 
-          <br>
-          <br>
-          At our core, we believe that every event should be a reflection of your personality 
-          and style. We take pride in our attention to detail, creative approach, and
-          commitment to delivering exceptional service.
-          <br>
-          <br>
-          Thank you for considering
-          us for your next event. We look forward to working with you to create a
-          memorable and successful occasion.
-          <a href="/contact">
-            <button class="bg-amber-900 w-full rounded-lg p-4 text-amber-200 my-8 font-bold">
-              Contact Us
-            </button>
-          </a>
-        </div>
+  <Hero
+    title="About us"
+    imgSrc="/src/images/contact.jpg"
+    subTitle="Bringing your dream events to life, one celebration at a time - we are your trusted event planner in Kolkata."
+  />
+  <section class="m-4 flex items-center justify-center lg:m-6">
+    <div class="max-w-[400px]">
+      <div class="my-6 text-base font-medium text-amber-900">
+        <h2 class="mb-4 text-xl font-bold">See you soon!</h2>
+
+        Our team of dedicated professionals strives to understand your unique
+        vision and bring it to life through meticulous planning and execution.
+        From intimate gatherings to grand celebrations, we offer a wide range of
+        services tailored to meet your specific needs.
+        <br />
+        <br />
+        At our core, we believe that every event should be a reflection of your personality
+        and style. We take pride in our attention to detail, creative approach, and
+        commitment to delivering exceptional service.
+        <br />
+        <br />
+        Thank you for considering us for your next event. We look forward to working
+        with you to create a memorable and successful occasion.
+        <a href="/contact">
+          <button
+            class="my-8 w-full rounded-lg bg-amber-900 p-4 font-bold text-amber-200"
+          >
+            Contact Us
+          </button>
+        </a>
       </div>
-    </section>
-  </Layout>
+    </div>
+  </section>
+</Layout>
