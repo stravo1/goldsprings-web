@@ -1,0 +1,3 @@
+- Our reliable and well-maintained fleet of buses is equipped with modern amenities to ensure a safe and enjoyable journey. 
+- With a commitment to on-time arrivals and departures, our professional and friendly drivers will take you to your destination with ease. 
+- Experience hassle-free and comfortable travel with our bus service starting from __₹15,000__!

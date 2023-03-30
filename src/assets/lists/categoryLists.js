@@ -2,7 +2,7 @@ const cater = "/src/images/category-images/cater.jpg";
 const decor = "/src/images/category-images/decor.jpg";
 const photo = "/src/images/category-images/photo.jpg";
 const ritual = "/src/images/category-images/rituals.jpg";
-const bus = "/src/images/category-images/bus.jpg";
+// const bus = "/src/images/category-images/bus.jpg";
 const card = "/src/images/category-images/card.jpg";
 
 const decorHero = "/src/images/category-images/decor/decor-hero.jpg";
@@ -61,14 +61,14 @@ export default [
     heroImgSrc: ritualHero,
     desc: "Honoring traditions, creating memories. We specialize in bespoke ritual planning.",
   },
-  {
-    category: "Bus",
-    link: "bus",
-    built: false,
-    thumbImgSrc: bus,
-    heroImgSrc: busHero,
-    desc: "Travel in style with us. Safe, reliable bus booking for all your transportation needs.",
-  },
+  // {
+  //   category: "Bus",
+  //   link: "bus",
+  //   built: false,
+  //   thumbImgSrc: bus,
+  //   heroImgSrc: busHero,
+  //   desc: "Travel in style with us. Safe, reliable bus booking for all your transportation needs.",
+  // },
   {
     category: "Card Printing",
     link: "card",

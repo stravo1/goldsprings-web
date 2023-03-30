@@ -1,0 +1,61 @@
+---
+import Hero from "../../components/Hero.astro";
+import Info from "../../components/Info.astro";
+import Layout from "../../layouts/Layout.astro";
+
+import { Content as Bus } from "../../assets/bus/bus.md";
+import homepageProdList from "../../assets/lists/homepageProdList";
+
+export function getStaticPaths() {
+  const totalList = [
+    ...homepageProdList
+  ];
+  return totalList.map((item, index) => ({
+    params: {
+      prod: item.link.split("/")[0],
+      item: item.link.split("/")[1],
+    },
+    props: {
+      title: item.title,
+      desc: item.desc,
+      imgSrc: item.thumbImgSrc,
+      border: item.border,
+      index: index,
+    },
+  }));
+}
+
+const {
+  title,
+  desc,
+  imgSrc,
+  border,
+  index,
+  listTitle = "Welcome aboard!",
+  listSubtitle = "Sit back, relax, and enjoy the ride with us.",
+  imageList = [],
+} = Astro.props;
+---
+
+<Layout>
+  <Hero
+    title={title}
+    subTitle={desc}
+    isItem={true}
+    imgSrc={imgSrc}
+    imageList={imageList}
+  />
+  <Info>
+    <div class="text-xl font-bold">{listTitle}</div>
+    <div class="mb-6 text-base font-medium">
+      {listSubtitle}
+    </div>
+    <div
+      class={border
+        ? "items border-2 border-amber-800 w-fit rounded-md border-dashed p-4"
+        : "items"}
+    >
+      {[<Bus />][index]}
+    </div>
+  </Info>
+</Layout>

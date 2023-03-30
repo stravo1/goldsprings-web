@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import CategoryItem from "../components/CategoryItem.astro";
 import categoryLists from "../assets/lists/categoryLists";
+import homepageProdList from "../assets/lists/homepageProdList";
 import Hero from "../components/Hero.astro";
 ---
 
@@ -12,13 +13,13 @@ import Hero from "../components/Hero.astro";
     subTitle="Expertly planned, perfectly executed.  Professional Event Planning at its best by Gold Springs"
   />
   <section class="m-4 lg:m-6">
-    <div class="font-medium text-amber-900 text-base my-6">
-      <h2 class="font-bold text-xl">Services:</h2>
+    <div class="my-6 text-base font-medium text-amber-900">
+      <h2 class="text-xl font-bold">Services:</h2>
       We specialize in the following services
     </div>
-    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
       {
-        categoryLists.map((item) => (
+        [...categoryLists, ...homepageProdList].map((item) => (
           <CategoryItem
             title={item.category}
             imgSrc={item.thumbImgSrc}

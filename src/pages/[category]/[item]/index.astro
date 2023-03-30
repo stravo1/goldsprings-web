@@ -12,6 +12,7 @@ import { Content as FullCourse2 } from "../../../assets/catering-menus/full-cour
 import { Content as Aroma } from "../../../assets/catering-menus/aroma.md";
 import { Content as Exquisite } from "../../../assets/catering-menus/exquisite.md";
 import { Content as Bridal } from "../../../assets/photography/bridal.md";
+import { Content as Trad } from "../../../assets/photography/trad.md";
 
 export function getStaticPaths() {
   const totalList = [...cateringMenuItems, ...photographyItems];
@@ -72,6 +73,7 @@ const {
           <Aroma />,
           <Exquisite />,
           <Bridal />,
+          <Trad />,
         ][index]
       }
     </div>
