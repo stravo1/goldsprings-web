@@ -15,6 +15,7 @@ const cardHero = "/src/images/category-images/card/card-hero.jpg";
 import cateringMenuItems from "./cateringMenuItems";
 import decorCategory from "./decorCategory";
 import photographyItems from "./photographyItems";
+import ritualItems from "./ritualItems";
 
 export default [
   {
@@ -56,9 +57,13 @@ export default [
   {
     category: "Rituals",
     link: "rituals",
-    built: false,
+    built: true,
+    holder: "Card",
+    list: ritualItems,
     thumbImgSrc: ritual,
     heroImgSrc: ritualHero,
+    listTitle: "Namaskar!",
+    listSubtitle: "We provide pandits for the following ceremonial events: ",
     desc: "Honoring traditions, creating memories. We specialize in bespoke ritual planning.",
   },
   // {

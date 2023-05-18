@@ -1,0 +1,1 @@
+Experience the beauty of rice ceremony rituals with our affordable service package with pandits at just __Rs. 7000.__ Immerse yourself in this auspicious tradition as we meticulously arrange every aspect of the ceremony. From sacred rituals to vibrant decorations, our team ensures a memorable and meaningful event that celebrates this cherished milestone in your life.

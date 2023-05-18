@@ -1,6 +1,8 @@
 ---
 import cateringMenuItems from "../../../assets/lists/cateringMenuItems";
 import photographyItems from "../../../assets/lists/photographyItems";
+import ritualItems from "../../../assets/lists/ritualItems";
+
 import Hero from "../../../components/Hero.astro";
 import Info from "../../../components/Info.astro";
 import Layout from "../../../layouts/Layout.astro";
@@ -11,11 +13,17 @@ import { Content as FullCourse } from "../../../assets/catering-menus/full-cours
 import { Content as FullCourse2 } from "../../../assets/catering-menus/full-course-2.md";
 import { Content as Aroma } from "../../../assets/catering-menus/aroma.md";
 import { Content as Exquisite } from "../../../assets/catering-menus/exquisite.md";
+
 import { Content as Bridal } from "../../../assets/photography/bridal.md";
 import { Content as Trad } from "../../../assets/photography/trad.md";
 
+import { Content as Rice } from "../../../assets/rituals/rice.md";
+import { Content as Death } from "../../../assets/rituals/death.md";
+import { Content as Wedding } from "../../../assets/rituals/wedding.md";
+import { Content as Thread } from "../../../assets/rituals/thread.md";
+
 export function getStaticPaths() {
-  const totalList = [...cateringMenuItems, ...photographyItems];
+  const totalList = [...cateringMenuItems, ...photographyItems, ...ritualItems];
   return totalList.map((item, index) => ({
     params: {
       category: item.link.split("/")[0],
@@ -74,6 +82,10 @@ const {
           <Exquisite />,
           <Bridal />,
           <Trad />,
+          <Wedding />,
+          <Rice />,
+          <Thread />,
+          <Death />,
         ][index]
       }
     </div>
