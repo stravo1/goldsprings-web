@@ -12,7 +12,7 @@
 - Coffee
 
 ### Main Course
-- Nany Naan
+- Baby Naan
 - Stuffed Potato (Chicken Stuffing)/ Keema Chana Masala
 - Fish Fry 
 - Salad

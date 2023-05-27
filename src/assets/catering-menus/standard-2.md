@@ -10,7 +10,7 @@
 - Kashmiri Aloo Dum/Paneer chana masala
 - Fish Fry / butter fish fry / fish orly
 - Salad
-- Pulao / Fish 
+- Pulao / Fried Rice 
 - Catla Kalia 
 - Chicken Rezala 
 - Chutney
