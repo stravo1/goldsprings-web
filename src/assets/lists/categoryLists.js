@@ -2,15 +2,15 @@ const cater = "/src/images/category-images/cater.jpg";
 const decor = "/src/images/category-images/decor.jpg";
 const photo = "/src/images/category-images/photo.jpg";
 const ritual = "/src/images/category-images/rituals.jpg";
-// const bus = "/src/images/category-images/bus.jpg";
-// const card = "/src/images/category-images/card.jpg";
+const bus = "/src/images/category-images/bus.jpg";
+const card = "/src/images/category-images/card.png";
 
 const decorHero = "/src/images/category-images/decor/decor-hero.jpg";
 const caterHero = "/src/images/category-images/cater/cater-hero.jpg";
 const photoHero = "/src/images/category-images/photo/photo-hero.jpg";
 const ritualHero = "/src/images/category-images/rituals/rituals-hero.jpg";
-// const busHero = "/src/images/category-images/bus/bus-hero.jpg";
-// const cardHero = "/src/images/category-images/card/card-hero.jpg";
+const busHero = "/src/images/category-images/bus/bus-hero.jpg";
+const cardHero = "/src/images/category-images/card/card-hero.jpg";
 
 import cateringMenuItems from "./cateringMenuItems";
 import decorCategory from "./decorCategory";
@@ -69,17 +69,17 @@ export default [
   // {
   //   category: "Bus",
   //   link: "bus",
-  //   built: false,
+  //   built: true,
   //   thumbImgSrc: bus,
   //   heroImgSrc: busHero,
   //   desc: "Travel in style with us. Safe, reliable bus booking for all your transportation needs.",
   // },
-  // {
-  //   category: "Card Printing",
-  //   link: "card",
-  //   built: false,
-  //   thumbImgSrc: card,
-  //   heroImgSrc: cardHero,
-  //   desc: "Impress with every invitation. We offers professional card printing services for all your special moments.",
-  // },
+  {
+    category: "Card Printing",
+    link: "card",
+    built: false,
+    thumbImgSrc: card,
+    heroImgSrc: cardHero,
+    desc: "Impress with every invitation. We offers professional card printing services for all your special moments.",
+  },
 ];
